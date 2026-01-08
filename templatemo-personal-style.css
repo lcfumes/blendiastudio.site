@@ -1756,72 +1756,91 @@ section {
 }
 
 .codinho-chat-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 150px;
+  position: fixed;
+  right: 20px;
+  bottom: 150px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: 12px 40px 11px 28px;
+  padding: 10px 32px 10px 22px; /* 👈 menor */
 
-    border-radius: 999px;
-    background: linear-gradient(135deg, #25D366, #1EBE5D);
-    color: #ffffff;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #25D366, #1EBE5D);
+  color: #ffffff;
 
-    font-family: 'Inter', sans-serif;
-    border: none;
-    cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  cursor: pointer;
 
-    box-shadow: 0 20px 45px rgba(37, 211, 102, 0.45);
-    z-index: 2147;
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.45);
+  z-index: 2147;
 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  /* hover */
-  .codinho-chat-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 28px 60px rgba(37, 211, 102, 0.6);
-  }
+/* hover */
+.codinho-chat-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 52px rgba(37, 211, 102, 0.6);
+}
 
-  /* texto central */
-  .codinho-chat-btn .chat-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    line-height: 1.25;
+/* texto */
+.codinho-chat-btn .chat-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.codinho-chat-btn strong {
+  font-size: 16px; /* 👈 menor */
+  font-weight: 800;
+}
+
+.codinho-chat-btn small {
+  font-size: 11px; /* 👈 menor */
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* bolinha */
+.codinho-dot {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.35);
+
+  animation: pulse-dot 1.8s infinite;
+  pointer-events: none;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .codinho-chat-btn {
+    bottom: 18px;   /* 👈 desce mais no mobile */
+    right: 14px;
+    padding: 9px 26px 9px 18px;
   }
 
   .codinho-chat-btn strong {
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 15px;
   }
 
   .codinho-chat-btn small {
-    font-size: 13px;
-    font-weight: 500;
-    opacity: 0.95;
+    font-size: 10.5px;
   }
+}
 
-  .codinho-dot {
-    position: absolute;
-    top: 50%;
-    right: 18px;
-    transform: translateY(-50%);
-
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.35);
-
-    animation: pulse-dot 1.8s infinite;
-    pointer-events: none;
-  }
 
 
   @keyframes pulse-dot {
