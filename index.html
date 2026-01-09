@@ -8,7 +8,8 @@
     <title>BlendIA Studio — Seu site em 24h por R$ 80</title>
 
     <!-- CSS do template -->
-    <link href="templatemo-personal-style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./templatemo-personal-style.css">
+
 
     <!-- SEO básico -->
     <meta name="description"
@@ -59,6 +60,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        
 
         .referral-simple {
   position: fixed;
@@ -121,16 +123,6 @@
   }
 }
 
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .referral-simple {
-    top: 14px;
-    right: 14px;
-    padding: 14px 20px;
-    font-size: 0.9rem;
-  }
-}
 
 
 /* MODAL DE INDICAÇÃO */
@@ -219,6 +211,8 @@
         </div>
 
         <div class="hero-content">
+  
+
             <div id="referral-modal" class="referral-modal">
   <div class="referral-modal-content">
     <button class="referral-close" onclick="closeReferralModal()">×</button>
@@ -230,10 +224,7 @@
       <strong>WhatsApp de quem fez a indicação</strong>.
     </p>
 
-    <p>
-      Quem indica ganha <strong>R$ 10</strong> e quem contrata
-      por indicação também ganha <strong>R$ 10</strong>.
-    </p>
+
   </div>
 </div>
 
